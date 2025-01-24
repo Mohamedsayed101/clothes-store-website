@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Women's Sports Clothing Collection</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #005f73, #94d2bd);
+        color: #333;
+      }
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+ 
+        /* Header Styling */
+        header {
+            background-color: #007bff;
+            color: white;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Logo Styling */
+        .logo {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Header Links (Login and Register) */
+        .header-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header-links a:hover {
+            color: black;
+        }
+
+        /* Navigation Styling */
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+       header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+       header nav ul li a:hover {
+            color: black
+        }
+
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color:  #007bff;
+        padding: 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #94d2bd;
+      }
+
+      .category {
+        margin: 2rem 0;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+      }
+
+      .category h2 {
+        text-align: center;
+        color: #023e8a;
+        border-bottom: 3px solid #00b4d8;
+        padding-bottom: 0.5rem;
+      }
+
+      main {
+        width: 100%;
+        padding: 0 1rem;
+      }
+
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      article {
+        background: white;
+        border: 2px solid #00b4d8;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      article:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      figure {
+        margin: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      figure img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .product-info {
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .product-info h3 {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        color: #023e8a;
+      }
+
+      .product-info p {
+        color: #555;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+      }
+
+      .product-info button {
+        background-color: #023e8a;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background-color 0.3s;
+    
+      }
+
+      .product-info button:hover {
+        background-color: #00b4d8;
+      }
+
+      footer {
+    background-color:#007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+      @media (max-width: 768px) {
+        .products {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        article {
+          width: 90%;
+        }
+
+        header h1 {
+          font-size: 2.5rem;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header >
+      <a href="Home.html">
+          <img class="logo" src="../images/Home_Logo.jpeg" alt="Logo">
+      </a>
+      <div class="header-links">
+          <a href="login.html" target="_parent">Login</a>
+          <a href="signup.html" target="_parent">Register</a>
+      </div>
+      <nav>
+          <ul>
+              <li><a href="Home.html" target="_parent">Home</a></li>
+              <li><a href="menPadge.html" target="_parent">Men</a></li>
+              <li><a href="women.html" target="_parent">Women</a></li>
+              <li><a href="Kids.html" target="_parent">Kids</a></li>
+              <li><a href="aboutus.html" target="_parent">About Us</a></li>
+          </ul>
+      </nav>
+  </header>
+    <nav>
+      <a href="#tshirts">T-Shirts</a>
+      <a href="#pantalon">Pantalon</a>
+      <a href="#shoes">shoes</a>
+    </nav>
+    <main>
+      <!-- T-Shirts Section -->
+      <section id="tshirts" class="category">
+        <h2>Sports T-Shirts</h2>
+        <div class="products">
+          <article>
+            <figure>
+              <img src="../images/t1.jpeg" alt="Gym T-shirt" />
+            </figure>
+            <div class="product-info">
+              <h3>Gym T-shirt</h3>
+              <p>Imported nylon gym T-shirt</p>
+              <h2>200$</h2>
+              <a href="ordere.html"> <a href="ordere.html"> <button>Add to Cart</button></a></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/t2.jpeg" alt="Gym T-shirt" />
+            </figure>
+            <div class="product-info">
+              <h3>Gym T-shirt</h3>
+              <p>Imported nylon gym T-shirt</p>
+              <h2>200$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/t3.jpeg" alt="Gym T-shirt" />
+            </figure>
+            <div class="product-info">
+              <h3>Gym T-shirt</h3>
+              <p>Imported nylon gym T-shirt</p>
+              <h2>200$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/t4.jpeg" alt="Gym T-shirt" />
+            </figure>
+            <div class="product-info">
+              <h3>Gym T-shirt</h3>
+              <p>Track _pink _women</p>
+              <h2>100$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/t5.jpeg" alt="Gym T-shirt" />
+            </figure>
+            <div class="product-info">
+              <h3>Gym T-shirt</h3>
+              <p>Track _purple _women_shirt</p>
+              <h2>100$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+         
+        </div>
+      </section>
+      <!-- pantalon Section -->
+      <section id="pantalon" class="category">
+        <h2>Sports pantalon</h2>
+        <div class="products">
+          <article>
+            <figure>
+              <img src="../images/p1.jpeg" alt="sports pantalon" />
+            </figure>
+            <div class="product-info">
+              <h3>Leggings</h3>
+              <p>Nike 2023 Charleston Leggings</p>
+              <h2>100$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/p2.jpeg" alt="sports pantalon" />
+            </figure>
+            <div class="product-info">
+              <h3> Move Lycra pants</h3>
+              <p>Waterproof Lycra pants move color </p>
+              <h2>100$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/p3.jpeg" alt="sports pantalon" />
+            </figure>
+            <div class="product-info">
+              <h3> Blue Lycra pants</h3>
+              <p>Waterproof Lycra pants blue colour</p>
+              <h2>100$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/p4.jpeg" alt="sports pantalon" />
+            </figure>
+            <div class="product-info">
+              <h3>Black Lycra pants</h3>
+              <p>Waterproof Lycra pants black colour</p>
+              <h2>100$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/p5.jpeg" alt="sports pantalon"  />
+            </figure>
+            <div class="product-info">
+              <h3>Adidas</h3>
+              <p>Adidas track pants</p>
+              <h2>100$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          
+        </div>
+      </section>
+      <!-- Shoes  Section -->
+      <section id="shoes" class="category">
+        <h2>Sports shose</h2>
+        <div class="products">
+          <article>
+            <figure>
+              <img src="../images/s1.webp" alt="sports shoes" />
+            </figure>
+            <div class="product-info">
+              <h3>Energetics</h3>
+              <p>Energetics Running Oz 1.1 Shoes For Women, Rose</p>
+              <h2>150$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/s3.webp" alt="sports shoes" />
+            </figure>
+            <div class="product-info">
+              <h3>Anta</h3>
+              <p>Anta Running Shoes For Women, Pink</p>
+              <h2>140$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <div class="products">
+            <article>
+              <figure>
+                <img src="../images/s2.webp" alt="sports shoes" />
+              </figure>
+              <div class="product-info">
+                <h3>Energetics</h3>
+                <p>Energetics Running Shoes For Women</p>
+                <h2>150$</h2>
+                <a href="ordere.html"> <button>Add to Cart</button></a>
+              </div>
+            </article>
+            <article>
+              <figure>
+                <img src="../images/s4.webp" alt="sports shoes" />
+              </figure>
+              <div class="product-info">
+                <h3>Anta</h3>
+                <p>Anta Running Shoes For Women, White</p>
+                <h2>140$</h2>
+                <a href="ordere.html"> <button>Add to Cart</button></a>
+              </div>
+            </article>
+          <article>
+            <figure>
+              <img src="../images/s5.webp" alt="sports shoes" />
+            </figure>
+            <div class="product-info">
+              <h3>ADIDAS</h3>
+              <p>ADIDAS RUNNING SHOES QUESTAR 3 W FOR WOMEN</p>
+              <h2>160$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Tut-Store. All rights reserved.</p>
+  </footer>
+    

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+    <title>Tut-Sport</title>
+</head>
+<body>
+    <!--Start Home-->
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img class="logo" src="../images/Home_Logo.jpeg" alt="Logo">
+                <nav>
+                    <ul>
+                        <!--put the links of other rather than #-->
+                        <li><a href="login.html" target="_parent">Login</a></li>
+                        <li><a href="signup.html" target="_parent">Register</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav>
+                <ul>
+                    <!--Not Change in home but put the links of other rather than #-->
+                    <li><a href="#" target="_parent">Home</a></li>
+                    <li><a href="menPadge.html" target="_parent">Men</a></li>
+                    <li><a href="women.html" target="_parent">Women</a></li>
+                    <li><a href="Kids.html" target="_parent">Kids</a></li>
+                    <li><a href="aboutus.html" target="_parent">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            <h1>Tut Store</h1>
+            <h3>Welcome to our sports store!</h3>
+            <div class="box">
+                <p>
+                    We offer high-quality athletic wear for men, women, and children.
+                    Find comfortable, stylish clothing perfect for workouts, sports, or casual wear.
+                </p>
+            </div>
+            <a href="login.html" class="button">Let's Go</a><!--the link to the login-->
+        </div>
+    </div>
+    <!--End Home-->
+
+    <!-- New Sections Below -->
+    
+    <section class="image-gallery">
+        <h2>Our Latest Collection</h2>
+    </section>
+
+
+
+    <!--Image-->
+    
+    <div class="products">
+      <article>
+        <figure>
+          <img src="data:image/jpeg;base64,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" alt="Long Sleeve Men's Top " />
+        </figure>
+        <div class="product-info">
+          <h3>Long Sleeve Men's Top and very comfort</h3>
+          <p>Tight-fit design for muscle support</p>
+        </div>
+      </article>
+      <article>
+        <figure>
+          <img src="../images/p4.jpeg" alt="sports pantalon" />
+        </figure>
+        <div class="product-info">
+          <h3>Black Lycra pants</h3>
+          <p>Waterproof Lycra pants black colour</p>
+        </div>
+      </article>
+      <article>
+        <figure>
+          <img src="../images/product6.jpg" alt="Cool-Tech Training Shirt" />
+        </figure>
+        <div class="product-info">
+          <h3>Cool-Tech Training Shirt</h3>
+          <p>Advanced cooling technology</p>
+        </div>
+      </article>
+      <article>
+        <figure>
+          <img src="../images/s4.webp" alt="sports shoes" />
+        </figure>
+        <div class="product-info">
+          <h3>Anta</h3>
+          <p>Anta Running Shoes For Women, White</p>
+        </div>
+      </article>
+    <article>
+      <figure>
+        <img src="../images/s5.webp" alt="sports shoes" />
+      </figure>
+      <div class="product-info">
+        <h3>ADIDAS</h3>
+        <p>ADIDAS RUNNING SHOES QUESTAR 3 W FOR WOMEN</p>
+      </div>
+    </article>
+    </div>
+
+
+    <!--Image-->
+
+    <!--video-->
+    <section class="video-section">
+        <h2>Watch Our Story</h2>
+        <div class="video-container">
+            <video allowfullscreen loop controls poster="../images/poster.png">
+                <source src="../videos/video.mp4" type="video/mp4" >
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <!--video-->
+
+<!--Transmations-->
+<section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"Great quality sportswear, fast delivery!" - Mohamed Salah</p>
+            </div>
+            <div class="testimonial">
+                <p>"Comfortable and stylish, highly recommend!" - Mazen Ali</p>
+            </div>
+            <div class="testimonial">
+                <p>"Love the products, would recommend to others!" - Abdulrahman Rahman</p>
+            </div>
+            <div class="testimonial">
+                <p>"Highly recommend, my favorite sportswear store!" - Mohammad Zaid</p>
+            </div>    
+        </div>
+    </section>
+  
+    <footer>
+      <p>&copy; 2024 Tut-Store. All rights reserved.</p>
+  </footer>
+    
+</body>
+</html>

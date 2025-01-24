@@ -1,0 +1,327 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+/*=====================================================================================*/
+/*=====================================================================================*/
+/*=====================================================================================*/
+/*=====================================================================================*/
+/* Header Styling */
+        .header {
+            background-color: #007bff;
+            color: white;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Logo Styling */
+        .header .logo {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Header Links (Login and Register) */
+        .header .header-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header .header-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header .header-links a:hover {
+            color: black;
+        }
+
+        /* Navigation Styling */
+        .header nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header nav ul li a:hover {
+            color: black
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 20px;
+            }
+
+            .header nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .header nav ul {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .header nav ul li a {
+                width: 100%;
+                text-align: left;
+            }
+
+            .header .header-links {
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+        }
+/*=====================================================================================*/
+/*=====================================================================================*/
+/*=====================================================================================*/
+/*=====================================================================================*/
+
+        /* Header */
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #FF5733; /* Orange text like in the image */
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        image{
+            width: 50%;
+            height: 50%;
+        }
+
+        /* Main Section */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .content p {
+            font-size: 1rem;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .highlight {
+            color: #FF5733;
+            font-weight: bold;
+        }
+
+        /* Image Section */
+        .image {
+            flex: 0.6;
+            text-align: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+<!--================================================================================================-->
+<!--================================================================================================-->
+<!--================================================================================================-->
+    <header class="header">
+        <a href="Home.html">
+            <img class="logo" src="../images/Home_Logo.jpeg" alt="Logo">
+        </a>
+        <div class="header-links">
+            <a href="login.html" target="_parent">Login</a>
+            <a href="signup.html" target="_parent">Register</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html" target="_parent">Home</a></li>
+                <li><a href="menPadge.html" target="_parent">Men</a></li>
+                <li><a href="women.html" target="_parent">Women</a></li>
+                <li><a href="Kids.html" target="_parent">Kids</a></li>
+                <li><a href="aboutus.html" target="_parent">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--================================================================================================-->
+<!--================================================================================================-->
+<!--================================================================================================-->
+<!--================================================================================================-->
+    <!-- Header Section -->
+    <header>
+        <h1>About Us</h1>
+        <p>Satisfying our customers is our goal</p>
+    </header>
+
+    <!-- Main Section -->
+    <div class="container">
+        <div class="content">
+            <h2>Why Us</h2>
+            <p> ultimate destination for stylish and high-quality clothing. we’ve been committed to offering the latest fashion trends that combine elegance, comfort, and affordability.
+            </p>
+        </div>
+
+        <div class="image">
+            <img src="https://i.pinimg.com/736x/5c/ba/a6/5cbaa6135cc309bac1f479754e8311e6.jpg">
+        </div>
+    </div>
+    <!-- ============ -->
+     <!-- contact us -->
+     <section id="contact-us" style="padding: 40px; background-color: #f4f4f4;">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <h2>Contact Us</h2>
+          <p>If you have any questions, feel free to reach out to us. We're here to help!</p>
+          <form action="/submit-contact-form" method="post" style="margin-top: 20px;">
+            <div style="margin-bottom: 15px;">
+              <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+              />
+            </div>
+            <div style="margin-bottom: 15px;">
+              <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+              />
+            </div>
+            <div style="margin-bottom: 15px;">
+              <label for="message" style="display: block; margin-bottom: 5px;">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              style="padding: 10px 20px; background-color: #007BFF; color: #fff; border: none; border-radius: 5px; cursor: pointer;"
+            >
+              Submit
+            </button>
+          </form>
+          <p style="margin-top: 20px;">
+            Or reach us directly at <a href="mailto:support@example.com" style="color: #007BFF;">support@example.com</a>
+          </p>
+          <div style="margin-top: 20px;">
+            <h3>Follow Us</h3>
+            <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
+              <!-- YouTube Icon -->
+              <a href="https://www.youtube.com/yourchannel" target="_blank" style="text-decoration: none;">
+                <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" style="width: 40px;" />
+              </a>
+              <!-- Instagram Icon -->
+              <a href="https://www.instagram.com/yourprofile" target="_blank" style="text-decoration: none;">
+                <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" style="width: 40px;" />
+              </a>
+              <!-- WhatsApp Icon -->
+              <a href="https://wa.me/yourphonenumber" target="_blank" style="text-decoration: none;">
+                <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" style="width: 40px;" />
+              </a>
+              <!-- Facebook Icon -->
+              <a href="https://www.facebook.com/yourprofile" target="_blank" style="text-decoration: none;">
+                <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" style="width: 40px;" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 STORE. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

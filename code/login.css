@@ -1,0 +1,47 @@
+body{
+  background-color: rgb(135, 178, 179);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login{
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px 5px rgb(9, 101, 101) ;
+
+}
+h1{
+  text-align: center;
+  padding-top: 20px;
+}
+form{
+  width: 200px;
+  margin-left: 15px;
+
+}
+form label{
+  display: flex;
+  margin-top:20px;
+  margin-left: 80px;
+  font-size: 18px;
+
+}
+form input{
+  width: 100%;
+  padding: 7px;
+  margin-left: 80px;
+  border:1px solid gray;
+}
+.button{
+  width: 80px;
+  height: 35px;
+  margin-top: 20px;
+  margin-left: 160px;
+  background-color:rgb(135, 178, 179);
+}
+p{
+  text-align: center;
+  padding-top: 20px;
+  font-size: small;
+}

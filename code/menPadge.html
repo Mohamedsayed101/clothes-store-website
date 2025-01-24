@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men's Sports Clothing Collection</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #005f73, #94d2bd);
+        color: #333;
+      }
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+ 
+        /* Header Styling */
+        header {
+            background-color: #007bff;
+            color: white;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Logo Styling */
+        .logo {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Header Links (Login and Register) */
+        .header-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header-links a:hover {
+            color: black;
+        }
+
+        /* Navigation Styling */
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+       header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+       header nav ul li a:hover {
+            color: black
+        }
+
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color:  #007bff;
+        padding: 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #94d2bd;
+      }
+
+      .category {
+        margin: 2rem 0;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+      }
+
+      .category h2 {
+        text-align: center;
+        color: #023e8a;
+        border-bottom: 3px solid #00b4d8;
+        padding-bottom: 0.5rem;
+      }
+
+      main {
+        width: 100%;
+        padding: 0 1rem;
+      }
+
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      article {
+        background: white;
+        border: 2px solid #00b4d8;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      article:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      figure {
+        margin: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      figure img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .product-info {
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .product-info h3 {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        color: #023e8a;
+      }
+
+      .product-info p {
+        color: #555;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+      }
+
+      .product-info button {
+        background-color: #023e8a;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background-color 0.3s;
+    
+      }
+
+      .product-info button:hover {
+        background-color: #00b4d8;
+      }
+
+      footer {
+    background-color:#007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+      @media (max-width: 768px) {
+        .products {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        article {
+          width: 90%;
+        }
+
+        header h1 {
+          font-size: 2.5rem;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="Home.html">
+        <img class="logo" src="../images/Home_Logo.jpeg" alt="Logo">
+    </a>
+    <div class="header-links">
+        <a href="login.html" target="_parent">Login</a>
+        <a href="signup.html" target="_parent">Register</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Home.html" target="_parent">Home</a></li>
+            <li><a href="menPadge.html" target="_parent">Men</a></li>
+            <li><a href="women.html" target="_parent">Women</a></li>
+            <li><a href="Kids.html" target="_parent">Kids</a></li>
+            <li><a href="aboutus.html" target="_parent">About Us</a></li>
+        </ul>
+    </nav>
+    </header>
+    <nav>
+      <a href="#tshirts">T-Shirts</a>
+      <a href="#shorts">Shorts</a>
+      <a href="#jackets">Jackets</a>
+    </nav>
+    <main>
+      <!-- T-Shirts Section -->
+      <section id="tshirts" class="category">
+        <h2>Sports T-Shirts</h2>
+        <div class="products">
+          <article>
+            <figure>
+              <img src="https://m.media-amazon.com/images/I/81P0MwUg0NL._AC_SY500_.jpg" alt="Lightweight Performance Tee" />
+            </figure>
+            <div class="product-info">
+              <h3>Lightweight</h3>
+              <p>Moisture-wicking fabric</p>
+              <h2>69$</h2>
+             <a href="ordere.html"> <a href="ordere.html"> <button>Add to Cart</button></a></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDxAODQ8NDQ4NDw8PDw8ODg8ODw8OFREWFhYRFRUYHSggGBolHhUVITEhJyktLi4uFx8zODMtNygtLisBCgoKDg0OGhAQFSseHh0tKy0rKystKy0tLS0tLS0tLS0rLSstLS0tLSstLS0tLSstLS0tLS0tLSsrKy0tLS0tLf/AABEIARMAtwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAACAAEDBAUGB//EAEAQAAEEAAMEBwUFBQgDAAAAAAEAAgMRBBIhBTFBUQYiYXGBkaEHEzKxwSNCUtHwFGJywuEVJDNDU4KSomOy8f/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAIBEBAQEAAgIDAAMAAAAAAAAAAAECAxEhMRIyQSJxkf/aAAwDAQACEQMRAD8A8faFIAhYFK0IEAiATgIwFAICIBOAnpA1JUipKkDUlSKkqQDSVIkqVA0lSKkqQDSVJ6SpAySekkDJJ6SQMkkkgEtTIkkFVgUrQo2KZoQEAiATAIwoFSek6ekDUlSekqQNSVIqTUqGpKk6VIBSRJUgGkk6SBqSpOkgFJOkgEpkRTIGSSSQVmBTtCjYFO0IEAjAThqINUDUnpFSVIBpKkdJUgCkkVJUqBSpFSakApIqTUgZJPSVIBSRUmQCmRJkAlMiTIGSTpIIowrDGqKMKywIHDUQaiDVIGoI8qWVShqfKghypZVNlSLUEGVNSmLU2VBFSalLlTZUEVJUpKTUgCk1I6SpABCEhSEJiEEdJkZCakQCZHSakUNJJyE6AYgrUYUEQVqMIDa1GGp2tUgagANRZUYanpBHlTFqmypi1BCWqGeQMFu+m7mrRasXaznOf7toJOgAbeZxNVVb+5A2I2lXwNvtP9FDHtj8TL7QaVnFdHMRG0ucx46u4USPJZE0bh90iuwhSWVbmz3G7h8YyT4TryOhU9LlbINg1XEFdHs2b3kbSfiGju8KompMQpKTUqiMhCQpSEJCCIhNSkIQ0gCk1KSk1IApMjpJQNCFcjCrQhXIwipGhSAJNCkAVQIaiyogEVII6TEKWkxCCGla6DYYO2k8ygHJG4x6brrXyJ81DS39gbLDZI8RG8h8kMzSDRpzchDgO51LHJeo68Wbdf00ukbAOtRFcaXFbUa2nGt62MbPjf2lsLzI+J5A+GMmiTy/Wq5jpJinjEPw8ejYSW3QJdX1Xnme74eu66z5jnsZDVkLU6Px/Zud+J5ruAA/NZ0o6rtSTyIC2tjtqIAbgSO/ivTl4tLRCEhSkICFphGQhpSEISEEZCalJSGkAUmpHSakAUkipJAoArsYVWAK7GEErQpGhMwKRoVCASpEAnpANJiFJSakEZC6LorjI2lsb794XFrNLaWO1N8qN+flgUp9nOLZ4iN/vGDzcB9VneflG+Pdzrw7KZ4ilLy2xRvde7QN7V5V0kLf26ZweOtIT59vovUdoxl4uzo3c0NJvxHYvL9sMHvDZBLSQQQzmToR4rzYezk8xSdCXuDRWY32bha1sNBkY1n4R67ys7ZYubuY6vMBbJC9OJ4ePd7qIhAQpCEJWmEZQ0iKZANIaRFMgakNIkkAUkipJA8AV2MKrAFcjCgmaFIAhYpAFQqT0npPSqGpKkVJ6QR0rOzYHOlYW1THxuJOgHXFeJOlJsNhZJXZImPkefusBce88h2r0Lon0RLIZzi6zTCMNYx3WiynMHZhpms8LGnG6V+NpL1Wdi8JnzU4tJF2Oa8w6S4ctkLS1pLdMwvVezYzYxb8M18KdHr5g/RcftPo1DI+QOllDmOrRrQDYHDXtXnzw8kvp6tcmLPbzLBYj3UgJBdm6lDfZIpdCtb+wcPh+sxpkl1p7zmeN+4VTfALPbhJLPV04cK7F3mLJ5efVlvhWIQEKeWMt+IEd4UTgjKFyAqRwQFQCUycoUCSSSRSSSToJIArkYVWAK3GgnapGhA1SNVQ4T0npOgu7I2RNinlkDbyi3ucaYwcC4/TeupwHQ+FpJne+ctFljPs2eJ3n0XU7F2V+x4FsdVK5hmm5mWrLfAU3wQSkhznMq5GtYy9wIsPd4ADzXbGZ15ZocPHHCAyJjGN0OWMBvn296ttxJbVceHMdqqRRBg4ucddd5PM8gmF3Z1K6onxUjXakEeqxcVhg5uetXE8d60Rq4clVns0PuiiP+IUsi9sKbAAjUeSrRYHLQOoJoX8luSgAEuIaBxJoBRPDRbXAOFdZvGk6gzZNnMIpzQRx0tZe0+jsQbmaS076B0W7inlmV4Ocfdf/qN4xP8A3xvB41Sp7VkBy5TbXRxlncZCT6BY1IscBiIsri08PUKEha+2IdSRvBI8isohcLFREJqRkIaUA0lSKkqQCknpOglhVuNVIVbjRU7FK1RsUoVQQWv0Uwgmx2Gjdq0yhxHNrAXkf9Vkhdj7MsJmxUkvCCE12PeQ0egeqj0HaEtUeAOvcVWhwl9wsXyGYnzv5KPaJJ14ObY7eY/XNWdjTZonN+8x1HuIBB+fku3qCtiIwNB/Uqk/RamKasuc0t9shY0k6IXNBPiT5k0ihciJQUMdBmaW2W5hRIDSa4jUELJZA2IOa2iC6xoMwFbi773YeWi28W5c9j5VLVkVMXi8tgatPxNO4/ke1UoJ8+UWSGZ6P7u/6/NVcdITuRbL1c4fh007aJXPvtrpDj4jvO91uPiSSufkFEhdbtBmjz+Fjv8AkaZ/MB/tXLYttOPefmsaVXKFEUyyhkkklAkydJBLCrcaqQq3Gip2KVqjYpWrSDC9R9muCyYKSYjXESGjzjj6o/7Z15cF7fsmD3ODhh3GOBgd/GWAu9SVYjN2jJQy8WOcPC9PSk3Ryc55waygRV+LP1r8Ky+arbUfb7HHf3jT5Uouhktz4vT/ADGgdwY0fmu19DbxbydAFk4hh4rpHxDeeFuPgsXGt6pdzKkopxmksyGHVJqor4802+a5TaGI60jT92iO4rqNtf4dritrP+0DuDmgFZ0sVXniOsOIU+w2gPky3qQ6jrVitPJUwVZ2dKGztB/zAR4jX81mK1MfFYDfxObf8LdfmW+S5LHs1vtJ8yu5nZYvs/X1XJ7Tg1cOQcfAapqDEKFOUy5oZJJJA4TJJIJ4VajVWFW40VOxTNULFM1VFvZ2GMs0UQ3yyMjH+5wH1Xtm2X5AT+IfJeZezrCe82hEd4hbJKfBuUermr0DpTKdG3Vajx/Xy8dZ+x+MGd9uJQ9ABmM0n45Xn1VTHz5YpH7iGO86Wj7NwP2c8w930XXSOtxR6pHPRYu2+q1rVtTCyAsDpG/rhvIUs59CpgwgCsYJungVUJWhHtdtwE8lwuN6zTzbr4L0DEtzRObzaV5+fjc09yzpqKLNVWxMpbIxw3spw8/6K1lokclSx3x+AWKV3LTmaDwIHqsfauF0eQNXjIPGgT9O8hXNgS54I73gZT4afT/4ruOgth5kVfLSv19F09o80eNT3oSrGMiyvc3kVXK4hkkkygdJMkgsQq3GqsStRoqwxStUTFK1Vl6B7JYrnxElfBCxl/xPv+RdJ0seC9g4i/JZ/smgrDTycZJg3vaxgPzeVf6RRddru2u9ax9l/HJ7eNYd/bQ8yFtezkVh+97/AJrB6YOyxxs4veT4NH5kLo/Z0y8FmH3ZpGnyab9V01fKOsDdSeS5Dar88x7CusxEmWNzlyEYzSE9qzlV+FlMPcfksqYrbnFMrsWFiSulRNEbYe5cLtRmSd3IldphH6Lluk8VPDu9Y16WMmVvWvms3aA6/gFpl1gFZu0PiHcFmrXTdEdYR+65w9b+q28WOqe5YfQo3E8cpD6tat3G/CVuemXm22B9s5UCtLbQ+1KziuNUBSSKSgSSZJBaiVtiqQq3Gip2KVqiapWqsvW/Z24M2fG46AyTFx7M1fRPtCV0s2Y7vugEGmqv0K12WwH/AFJvLOSrcsgLs7jTY2WSb0Asnf8ARdMz9WOG6Zz5sSIxuhYAf4ndY+hau39mcRGDN7pHud6lv8q8vxWIMsj5Xb5HueeyzdL2HoJDl2fAfxtzeBJWNXxSe023JMrMqxtlQ2bWp0lbq2uI1UeDjyR2V1x6Sq+OOtLExi2JjZJWRjwtUVcI/WlndJYraDyKs4d9OTbWFt71n8X9chHW4qltJtOA7FfkZlcqm1Nch7CCsX0tbXQWTWZn8Dh6g/RdHtAU09y5DoVJWLy/6kb2+IIP0K7HbA+zcALNDTxC3n0y8323/iLNK0NsH7U63XLdazyuVUBSSKSyGSSToLUStRqtErTEWpmKVqiapWqsvWuhMZ/suHhZnduLtPeuHDduVDb04jwmIdYBe0xjeCS/q15WtPo3A0bMw1AuBjJoFobmLnFxN6XZO/ksHpVLWDe3LmzSRi2ua4R04G3Ed1aDiuk+o4YL3Dok2tn4UbvsGHzFrw5e5bEy/ssURLQcgblJF0L0rjoCuevSwUuSaYNBsM30CQT3qltg5Xe7buq1uHLG3qgAC6AFLGMBkc4u1dvv5Bbxf8LGe8UPBZGPG9auKd1g1Z+N3u7l2ZYbTT+wqTaR6rO0n5KHEcDyKW1X22E9p+Sw0wsYzVZe0m6A9v0W3jBYvksXHnq1y1WatXOhIBx0YOay2QNrnlvXsoH0XXdJ35YnuBd1cofVA0SAuc9nTCcaaaSBBJbuDOs3U99V4rc6XEgPIoB+UOHA5VrP1Y/Xne0HAvOXQCgqhU03xGtNVEVxqoykE5TBRTJ06ZBajVqNVYirMaKnapWqJqkaqy7/AGPtmcYCKKIRMEbXNDnNzuPXdryG/ksDE7TnkL4J5bY8AEZIwA4EHgBxryWnsUVho+0OPd1zquJ2zjne9d7oEtEgBcOA5/IeK82t678V7scefjO4vMbleA/c1wDu69V7rsjK+CJ7crhRLXCjoSdQfFeEMkLiHO1IaCeZIbu9Fr9Eds4hsJiw+IMLmyl/xCsprQNc1zTZvgO9ejvvLyfHrVj2fExuPw1uPFRww5Gk1ZrcNdV5Liume2WTuiieydrKzXhWuLQd1htf1VravT/aGFw7ZZm4J73kD3bsNKw666n3nIckl8HTtdpwOMmYMcABZOU1axcfx7QFxuG9sWIdQfgcG7NYOV8jNB5p5faM91A4JrcwF1in03MNB8HaF1zyTpnpsSssVRVbHA5IxR6rj5UuXi9okkl1gmNoG7xL3HTh8Cz8R07ndbWQYdlHe4vk/JLvJ06nGg0BVCvVc7jngEBxALtGgmiSNdFh4/pTjH6e8bGP/HGB6myqOwg6TGQue5zqkEj3OJJDGW42eWleK563G5O/DvcHnw8TnRySRyPb1ixzmUa6oNcr+axMd0sxBOSUiZpJvMA17eGjh9bWvDiTPBKW0AHuaL3kV+h4FcLiDcoH7zb77XmzvXft6eTGc566bTzqe8oCjKAr0vEEoUZQKKSSdJBYjCsxqGMKwxBK1SBRtUoVRchxb8oizkMGYV+474vEakLnNpsMUzBZDWynOBxBI1PzWyFVx+AbO7NI51mt1VpyXHXH/LuPVx88metfi/srDuEUrnHMQSARqAHAn0r1WdsLFe7m13OOUrqtj4UDAzZRoNBxOmpPkVyE2HLXGuB9QtydTpy1e726zZhc2WSZ5OoDW66UCSPLMfM9i5fp5tB0rgwuJbGLAvQO1s+XyW5hcUHRA8QNe9ch0nf1vAk+OiJWMyTK6uHV+i9EbsuM4dltc6SaIFr2Rl3E03Q3fbS8zx5ovrgB6UvVpQBgQyIBj5cFGx0g0flMeYsbytztTevghHnmA+ObiMz9RqDrvHYqTDqe9auGwD48PJO9uRgblaTQzOJqhzWRAiFOt/osI24fFS9Z84ysaxrcxERF5t24nT/aFgTJ8FjZIHiSI06i0g7nNPA+nks6ncb49TOpa7aSb9nwFuzB8zyQwjK4Cqs9+pXM4SHO/Mb6pzOPN93S0ZHnFRxvlc7ddA6A1uFo2sDRTRQCZxe+61ycss6yYoSiKErq84ShRlDSKZJFSSgtRKyxJJBI1SBJJVBBOkkqO02cwDDUBo6BhPaTELXE40frwKSSzHRFgT8Q4Wue6Qm5Df7qSSlRg486v8fmvVpD/dIe1nyjbSSSysed4+Rx6pcS0XQs0PBV4UklUDJvUD0klB0mxT/d2d7/AP3KuEaJ0l0jCIoSkkgEpkkkUikkkg//2Q==" alt="Long Sleeve Men's Top " />
+            </figure>
+            <div class="product-info">
+              <h3>Long Sleeve Men's Top and very comfort</h3>
+              <p>Tight-fit design for muscle support</p>
+              <h2>53$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="data:image/jpeg;base64,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" alt="Long Sleeve Men's Top" />
+            </figure>
+            <div class="product-info">
+              <h3>Long Sleeve Men's Top and very comfort and Flexible</h3>
+              <p>Lightweight and quick-drying material</p>
+              <h2>99$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/Nexussummer2024-56.jpg?v=1718411220" alt="Cool-Tech Training Shirt" />
+            </figure>
+            <div class="product-info">
+              <h3>Cool-Tech Training Shirt</h3>
+              <p>Advanced cooling technology</p>
+              <h2>60$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://m.media-amazon.com/images/I/7110vlxyrIL.jpg" alt="Cool-Tech Training Shirt" />
+            </figure>
+            <div class="product-info">
+              <h3>Cool-Tech Training Shirt</h3>
+              <p>Advanced cooling technology</p>
+              <h2>80$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/Nexus102.jpg?v=1708549398" alt="Nexus Gym Junkies Tank" />
+            </figure>
+            <div class="product-info">
+              <h3>Nexus Gym Junkies Tank</h3>
+              <p>Advanced cooling technology</p>
+              <h2>80$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Shorts Section -->
+      <section id="shorts" class="category">
+        <h2>Sports Shorts</h2>
+        <div class="products">
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/Nexus82.jpg?v=1695491318" alt="Running Performance Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Running Performance Shorts</h3>
+              <p>Lightweight and quick-drying</p>
+              <h2>20$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/Nexus178.jpg?v=1695489165" alt="Compression Training Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Compression Training Shorts</h3>
+              <p>Muscle support and comfort</p>
+              <h2>25$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/Nexus14.jpg?v=1695491139" alt="Nexus Basic Performance Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Nexus Basic Performance Shorts</h3>
+              <p>Muscle support and comfort</p>
+              <h2>25$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/Nexussummer2024-64_1880x.jpg?v=1718411419" alt="Compression Training Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Nexus Sweatshorts and good for Running</h3>
+              <p>Muscle support and comfort</p>
+              <h2>25$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://media.centrepointstores.com/i/centrepoint/3805325-SPLMANTEX2H3T1414D-SPS24141223_01-2100.jpg?fmt=auto&h=517&w=345&qlt=90&sm=c" alt="Gym Workout Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Gym Workout Shorts and good fo Running</h3>
+              <p>Flexible and breathable material</p>
+              <h2>30$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/Nexus307.jpg?v=1695491318" alt="Nexus Thunder Performance Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Basketball Training Shorts</h3>
+              <p>Loose fit for maximum movement</p>
+              <h2>25$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Jackets Section -->
+      <section id="jackets" class="category">
+        <h2>Sports Jackets</h2>
+        <div class="products">
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/BE9C72C8-0500-4E9C-B79B-C295BEFFAEEE.jpg?v=1734285454" alt="Two-tone Windbreaker Jacket in Black" />
+            </figure>
+            <div class="product-info">
+              <h3>Two-tone Windbreaker Jacket in Black</h3>
+              <p>Thermal insulation, wind-resistant</p>
+              <h2>199$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/GVshowergels_webuseonly_56.jpg?v=1703209550" alt="Retro Half-Zip Windbreaker in Biege" />
+            </figure>
+            <div class="product-info">
+              <h3>Retro Half-Zip Windbreaker in Biege</h3>
+              <p>Thermal insulation, wind-resistant</p>
+              <h2>199$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/B33F3199-3FE8-44EA-9EC0-CC2BD7662F9B.jpg?v=1734285539" alt="Two-tone Windbreaker Jacket in Grey" />
+            </figure>
+            <div class="product-info">
+              <h3>Two-tone Windbreaker Jacket in Grey</h3>
+              <p>Thermal insulation, wind-resistant</p>
+              <h2>199$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/65C40D56-459E-406C-8802-44096797BD07.jpg?v=1732869728" alt="Haxel Unisex Windbreaker Jacket" />
+            </figure>
+            <div class="product-info">
+              <h3>Haxel Unisex Windbreaker Jacket</h3>
+              <p>Perfect for warm-up and cool-down</p>
+              <h2>299$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/290018F2-BC65-442C-97EB-F7ABA78E4CAC.jpg?v=1732869728" alt="Haxel Unisex Windbreaker Jacket" />
+            </figure>
+            <div class="product-info">
+              <h3>Haxel Unisex Windbreaker Jacket</h3>
+              <p>Protects from rain and wind</p>
+              <h2>199$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="https://nexussports.store/cdn/shop/files/36E0E7FD-2BE7-4904-9C05-0A2774DB4F83.jpg?v=1732869728" alt="Two-tone Windbreaker Jacket in Grey" />
+            </figure>
+            <div class="product-info">
+              <h3>Two-tone Windbreaker Jacket in Grey</h3>
+              <p>Muscle support and temperature control</p>
+              <h2>550$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Tut-Store. All rights reserved.</p>
+  </footer>
+    
+  

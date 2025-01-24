@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men's Sports Clothing Collection</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #005f73, #94d2bd);
+        color: #333;
+      }
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+ 
+        /* Header Styling */
+        header {
+            background-color: #007bff;
+            color: white;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Logo Styling */
+        .logo {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Header Links (Login and Register) */
+        .header-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header-links a:hover {
+            color: black;
+        }
+
+        /* Navigation Styling */
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+       header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+       header nav ul li a:hover {
+            color: black
+        }
+
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color:  #007bff;
+        padding: 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #94d2bd;
+      }
+
+      .category {
+        margin: 2rem 0;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+      }
+
+      .category h2 {
+        text-align: center;
+        color: #023e8a;
+        border-bottom: 3px solid #00b4d8;
+        padding-bottom: 0.5rem;
+      }
+
+      main {
+        width: 100%;
+        padding: 0 1rem;
+      }
+
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      article {
+        background: white;
+        border: 2px solid #00b4d8;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      article:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      figure {
+        margin: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      figure img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .product-info {
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .product-info h3 {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        color: #023e8a;
+      }
+
+      .product-info p {
+        color: #555;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+      }
+
+      .product-info button {
+        background-color: #023e8a;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background-color 0.3s;
+    
+      }
+
+      .product-info button:hover {
+        background-color: #00b4d8;
+      }
+
+      footer {
+    background-color:#007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+      @media (max-width: 768px) {
+        .products {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        article {
+          width: 90%;
+        }
+
+        header h1 {
+          font-size: 2.5rem;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+      <header >
+      <a href="Home.html">
+          <img class="logo" src="../images/Home_Logo.jpeg" alt="Logo">
+      </a>
+      <div class="header-links">
+          <a href="login.html" target="_parent">Login</a>
+          <a href="signup.html" target="_parent">Register</a>
+      </div>
+      <nav>
+          <ul>
+              <li><a href="Home.html" target="_parent">Home</a></li>
+              <li><a href="menPadge.html" target="_parent">Men</a></li>
+              <li><a href="women.html" target="_parent">Women</a></li>
+              <li><a href="Kids.html" target="_parent">Kids</a></li>
+              <li><a href="aboutus.html" target="_parent">About Us</a></li>
+          </ul>
+      </nav>
+  </header>
+    <nav>
+      <a href="#tshirts">T-Shirts</a>
+      <a href="#shorts">Shorts</a>
+      <a href="#jackets">Shoes</a>
+    </nav>
+    <main>
+      <!-- T-Shirts Section -->
+      <section id="tshirts" class="category">
+        <h2>Sports T-Shirts</h2>
+        <div class="products">
+          <article>
+            <figure>
+              <img src="../images/3.jpg" alt="Lightweight Performance Tee" />
+            </figure>
+            <div class="product-info">
+              <h3>Lightweight</h3>
+              <p>Moisture-wicking fabric</p>
+              <h2>69$</h2>
+             <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/6.jpg" alt="Lightweight Performance Tee" />
+            </figure>
+            <div class="product-info">
+              <h3>Long Sleeve Men's Top and very comfort</h3>
+              <p>Tight-fit design for muscle support</p>
+              <h2>53$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/4.jpg" alt="Lightweight Performance Tee" />
+            </figure>
+            <div class="product-info">
+              <h3>Long Sleeve Men's Top and very comfort and Flexible</h3>
+              <p>Lightweight and quick-drying material</p>
+              <h2>99$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/5.jpg" alt="Lightweight Performance Tee" />
+            </figure>
+            <div class="product-info">
+              <h3>Cool-Tech Training Shirt</h3>
+              <p>Advanced cooling technology</p>
+              <h2>60$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/1.jpg" alt="Lightweight Performance Tee" />
+            </figure>
+            <div class="product-info">
+              <h3>Cool-Tech Training Shirt</h3>
+              <p>Advanced cooling technology</p>
+              <h2>80$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/2.jpg" alt="Lightweight Performance Tee" />
+            </figure>
+            <div class="product-info">
+              <h3>Nexus Gym Junkies Tank</h3>
+              <p>Advanced cooling technology</p>
+              <h2>80$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Shorts Section -->
+      <section id="shorts" class="category">
+        <h2>Sports Shorts</h2>
+        <div class="products">
+          <article>
+            <figure>
+              <img src="../images/7.jpg" alt="Running Performance Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Running Performance Shorts</h3>
+              <p>Lightweight and quick-drying</p>
+              <h2>20$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/8.jpg" alt="Running Performance Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Compression Training Shorts</h3>
+              <p>Muscle support and comfort</p>
+              <h2>25$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/9.jpg" alt="Running Performance Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Nexus Basic Performance Shorts</h3>
+              <p>Muscle support and comfort</p>
+              <h2>25$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/10.jpg" alt="Running Performance Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Nexus Sweatshorts and good for Running</h3>
+              <p>Muscle support and comfort</p>
+              <h2>25$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/11.jpg" alt="Running Performance Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Gym Workout Shorts and good fo Running</h3>
+              <p>Flexible and breathable material</p>
+              <h2>30$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/12.jpg" alt="Running Performance Shorts" />
+            </figure>
+            <div class="product-info">
+              <h3>Basketball Training Shorts</h3>
+              <p>Loose fit for maximum movement</p>
+              <h2>25$</h2>
+              <a href="./ordere.html"><button>Add to Cart</button></a> 
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Shoes Section -->
+      <section id="jackets" class="category">
+        <h2>Sports Shose</h2>
+        <div class="products">
+          <article>
+            <figure>
+              <img src="../images/13.jpg" alt="Two-tone Windbreaker Jacket in Black" />
+            </figure>
+            <div class="product-info">
+              <h3>Energetics</h3>
+              <p>Energetics Running Oz 1.1 Shoes For Women, Rose</p>
+              <h2>150$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/14.jpg" alt="Two-tone Windbreaker Jacket in Black" />
+            </figure>
+            <div class="product-info">
+              <h3>Anta</h3>
+              <p>Anta Running Shoes For Women, Pink</p>
+              <h2>140$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/15.jpg" alt="Two-tone Windbreaker Jacket in Black" />
+            </figure>
+            <div class="product-info">
+              <h3>Deckers Brands</h3>
+              <p>Deckers Brands Running Shoes For Women</p>
+              <h2>150$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/16.jpg" alt="Two-tone Windbreaker Jacket in Black" />
+            </figure>
+            <div class="product-info">
+              <h3>Puma</h3>
+              <p>Puma Running Shoes For Women, White</p>
+              <h2>140$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/17.jpg" alt="Two-tone Windbreaker Jacket in Black" />
+            </figure>
+            <div class="product-info">
+              <h3>ADIDAS</h3>
+              <p>ADIDAS RUNNING SHOES QUESTAR 3 W FOR WOMEN</p>
+              <h2>160$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+          <article>
+            <figure>
+              <img src="../images/18.jpg" alt="Two-tone Windbreaker Jacket in Black" />
+            </figure>
+            <div class="product-info">
+              <h3>Nike</h3>
+              <p>Nike Running Shoes For Women, White</p>
+              <h2>140$</h2>
+              <a href="ordere.html"> <button>Add to Cart</button></a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Tut-Store. All rights reserved.</p>
+  </footer>

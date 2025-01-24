@@ -1,0 +1,40 @@
+body{
+  background-color: rgb(135, 178, 179);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Sign{
+  width: 360px;
+  height: 620px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px 5px rgb(9, 101, 101) ;
+}
+h1{
+  text-align: center;
+  padding-top: 15px;
+}
+form{
+  width: 300px;
+  margin-left: 20px;
+}
+form label{
+  display: flex;
+  margin-top:20px;
+  font-size: 18px;
+}
+form input{
+  width: 100%;
+  padding: 7px;
+  border:1px solid gray;
+}
+.button{
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  background-color:rgb(135, 178, 179);
+}
+p{
+  text-align: center;
+  padding-top: 20px;
+}
