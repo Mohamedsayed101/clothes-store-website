@@ -169,4 +169,23 @@ export default ProductCard;
   background-color: #0056b3;
 }
 ```
+---
+## ⚡ How to Use
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mohamedsayed101/clothes-store-website
+   ```
+
+---
+
+## ✨ Deployment
+You can deploy the template easily using:
+- [GitHub Pages](https://mohamedsayed101.github.io/clothes-store-website/)  
+- [Netlify](https://colthes.netlify.app/)  
+
+---
+
+## 📧 Contact
+Created with ❤️ by **[Mohamed Sayed]** and MyTeam  
+Feel free to fork, customize, and share this template!
